@@ -97,15 +97,20 @@ main {
 
 /*--------------Home------------------*/
 #home{
-	background-color: var(--black);
 	color: var(--white);
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	height: 100vh;
 	min-height: 400px;
 	max-height: 650px;
+	background: url(../assets/bg1.png),
+                url(../assets/bg1.png),
+                linear-gradient(50deg, var(--green-600), var(--green-100));
+	background-position: center;
+    background-attachment: fixed;
 	
 }
 .home-content {
