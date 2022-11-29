@@ -1,8 +1,9 @@
+
 function displayText(idActive, idInactive) {
 	let active = document.getElementById(idActive);
 	let inactive = document.getElementById(idInactive);
 	let arrayH6 = document.querySelectorAll('.btn-h6');
-
+	
 	active.style.display = 'block';
 	inactive.style.display = 'none';
 	
@@ -15,3 +16,12 @@ function displayText(idActive, idInactive) {
 		arrayH6[0].classList.remove("active");
 	}
 }
+
+
+(function () {
+	let menuColor = document.getElementById('menuColor');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50 ) menuColor.classList.add('menuFixed'); 
+        else menuColor.classList.remove('menuFixed');
+    });
+})();
