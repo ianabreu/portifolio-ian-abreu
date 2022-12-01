@@ -28,7 +28,7 @@ body {
 	background-color: var(--white);
 }
 
-body, input, select, textarea, button {
+body, input, select, textarea, button, a {
 	font: 400 1rem 'Lato', sans-serif;
 }
 
@@ -56,7 +56,7 @@ body::-webkit-scrollbar-thumb {
 .header-container {
 	position: fixed;
 	width: 100%;
-	height: 4rem;
+	height: 5rem;
 	transition: all 0.5s;
 }
 
@@ -100,6 +100,7 @@ body::-webkit-scrollbar-thumb {
 	margin-left: 1.5rem;
 	color: var(--white);
 	transition: all .4s;
+	padding: 0.5rem;
 }
 
 .link a:hover {
@@ -197,8 +198,8 @@ main {
 
 /*-------------Sobre------------------*/
 #about {
-	padding-top: 4rem;
-	margin-top: -4rem;
+	padding-top: 5rem;
+	margin-top: -5rem;
 	
 	color: var(--black);
 	
@@ -227,12 +228,14 @@ main {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 .about-text-area {
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
+	/* padding: 1rem; */
 	width: 50%;
 	max-width: 700px;
 }
@@ -313,8 +316,8 @@ main {
 
 /*--------------Portfolio---------*/
 #portfolio {
-	padding-top: 4rem;
-	margin-top: -4rem;
+	padding-top: 5rem;
+	margin-top: -5rem;
 	/* display: flex; */
 	
 }
@@ -350,7 +353,7 @@ main {
 	align-items: center;
 
 	flex-direction: column;
-	padding-top: 4rem;
+	padding-top: 5rem;
 
 	height: 80vh;
 	min-height: 400px;
@@ -365,7 +368,6 @@ main {
 	font-size: 2.5rem;
 	font-weight: 900;
 	color: var(--white);
-	border-bottom: 1px solid var(--gray-900);
 }
 
 .my-contacts {
@@ -377,7 +379,11 @@ main {
 }
 
 .my-contacts a, .my-contacts div, #contact p {
-	margin: 1rem 0;
+	margin: 1rem;
+}
+.my-contacts p {
+	text-align: center;
+	font-size: 1.2rem;
 }
 
 .my-contacts div a {
@@ -394,8 +400,6 @@ footer {
 	justify-content: center;
 }
 
-
-
 @media(max-width: 1080px) {
 	html {
 		font-size: 93.75%;
@@ -406,6 +410,10 @@ footer {
 	html {
 		font-size: 87.5%;
 	}
+	.link a {
+		margin-left: 0.5rem;
+		padding: 0.5rem;
+	}
 	.about-content {
 		flex-direction: column;
 	}
@@ -413,11 +421,36 @@ footer {
 		width: 95%;
 	}
 	#tech {
+		margin-top: 2rem;
 		flex-direction: column-reverse;
 	}
 }
 @media(max-width: 480px) {
 	.header-content {
 		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.home-content p, .home-content h1 {
+		line-height: 2.5rem;
+	}
+	.home-content p {
+		font-size: 1.05rem;
+	}
+	.home-content h1 {
+		font-size: 2.5rem;
+	}
+	.link {
+		margin-top: 0.5rem;
+	}
+	.link a {
+		margin-left: 0.5rem;
+		padding: 0.5rem;
+	}
+	.cta-button {
+		font-size: 1.5rem;
+	}
+	.about-content {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 }

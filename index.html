@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Portifólio Ian Abreu</title>
@@ -26,10 +25,10 @@
 
 			<nav class="header-menu">
 				<ul>
-					<li class="link"><a href="#home">Início</a></li>
-					<li class="link"><a href="#about">Sobre</a></li>
-					<li class="link"><a href="#portfolio">Portifólio</a></li>
-					<li class="link"><a href="#contact">Contatos</a></li>
+					<li class="link" aria-label="Seção Inicial"><a href="#home">Início</a></li>
+					<li class="link" aria-label="seção sobre"><a href="#about">Sobre</a></li>
+					<li class="link" aria-label="seção portfolio"><a href="#portfolio">Portifólio</a></li>
+					<li class="link" aria-label="seção contatos"><a href="#contact">Contatos</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -45,11 +44,21 @@
 				<p>HTML, CSS, Javascript</p>
 				<p>React Js, React Native</p>
 				<div>
-					<a class="social-media"><i class="bi bi-github"></i></a>
-					<a class="social-media"><i class="bi bi-linkedin"></i></a>
-					<a class="social-media"><i class="bi bi-instagram"></i></a>
+					<a class="social-media" href="https://github.com/ianabreu" target="_blank" aria-label="github">
+						<i class="bi bi-github"></i>
+					</a>
+					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank" aria-label="linkedin">
+						<i class="bi bi-linkedin"></i>
+					</a>
+					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank" aria-label="instagram">
+						<i class="bi bi-instagram"></i>
+					</a>
+
 				</div>
-				<a class="cta-button"><i class="bi bi-whatsapp"> </i>Vamos Conversar</i></a>
+				<a href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian" target="_blank"
+					class="cta-button">
+					<i class="bi bi-whatsapp"> </i>Vamos Conversar</i>
+				</a>
 			</article>
 		</section>
 
@@ -110,7 +119,8 @@
 							<p><strong>HTML5:</strong> Projetando páginas web com HTML semântico.</p>
 							<p><strong>CSS3:</strong> Flexbox, Grid e Design Responsivo.</p>
 							<p><strong>JavaScript:</strong> Operações com Arrays, manipulação de DOM, requisições...</p>
-							<p><strong>React Js e React Native:</strong> React Hooks, Styled Components, Axios, integração
+							<p><strong>React Js e React Native:</strong> React Hooks, Styled Components, Axios,
+								integração
 								com Firebase...</p>
 							<p>Atualmente estudando <strong>Node js, Typescript e Mongo db</strong>.</p>
 						</div>
@@ -124,9 +134,9 @@
 			<div class="portfolio-container">
 
 				<h2 class="title-section">Portfólio</h2>
-				
+
 				<div class="content-projects">
-					
+
 					<div class="area-img"></div>
 					<div class="area-img"></div>
 					<div class="area-img"></div>
@@ -142,27 +152,30 @@
 					<div class="area-img"></div>
 					<div class="area-img"></div>
 					<div class="area-img"></div>
+				</div>
+
 			</div>
-			
-		</div>
 		</section>
-		
+
 		<section id="contact">
 			<h2 class="title-section-dark">Contato</h2>
 
 			<div class="my-contacts">
 
 				<p>Se tiver interesse, entre em contato, estou quase sempre online!</p>
-				<a class="social-media"><i class="bi bi-whatsapp"></i> +55 77 99982-4116</a>
+				<a href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian" target="_blank" aria-label="whatsapp"
+					class="social-media"><i class="bi bi-whatsapp"></i> +55 77 99982-4116</a>
 
-				<a class="social-media"><i class="bi bi-envelope"></i> ianabreudev@gmail.com</a>
+				<a 
+				href="mailto:ianabreudev@gmail.com?subject=Ol%C3%A1%2C%20Ian" target="_blank" aria-label="email"
+				class="social-media"><i class="bi bi-envelope"></i> ianabreudev@gmail.com</a>
 				<div>
-					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank"><i
-							class="bi bi-instagram"></i></a>
-					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank"><i
-							class="bi bi-linkedin"></i></a>
-					<a class="social-media" href="https://github.com/ianabreu" target="_blank"><i
+					<a class="social-media" href="https://github.com/ianabreu" target="_blank" aria-label="github"><i
 							class="bi bi-github"></i></a>
+					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank" aria-label="linkedin"><i
+							class="bi bi-linkedin"></i></a>
+					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank" aria-label="instagram"><i
+							class="bi bi-instagram"></i></a>
 				</div>
 
 
