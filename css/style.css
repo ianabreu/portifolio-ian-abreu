@@ -197,7 +197,6 @@ main {
 
 /*-------------Sobre------------------*/
 #about {
-	
 	padding-top: 4rem;
 	margin-top: -4rem;
 	
@@ -227,8 +226,7 @@ main {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
-	/* height: 70vh; */
+	justify-content: space-between;
 }
 
 .about-text-area {
@@ -314,14 +312,29 @@ main {
 }
 
 /*--------------Portfolio---------*/
+#portfolio {
+	padding-top: 4rem;
+	margin-top: -4rem;
+	/* display: flex; */
+	
+}
+.portfolio-container{
+	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
 .content-projects {
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 1px solid red;
 }
 
 .area-img {
-	margin: 10px;
-	width: 100px;
-	height: 100px;
+	margin: 0.5rem;
+	width: 20rem;
+	aspect-ratio: 16 / 9;
 	background-color: #58B860;
 }
 
