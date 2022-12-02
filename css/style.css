@@ -337,11 +337,19 @@ main {
 
 .area-img {
 	margin: 0.5rem;
-	width: 20rem;
-	aspect-ratio: 16 / 9;
+	width: 15rem;
+	height: 15rem;
+	overflow: hidden;
 	background-color: #58B860;
+	transition: all 0.3s;
 }
-
+.area-img:hover {
+	transform: scale(0.95);
+}
+.area-img img {
+	width: 15rem;
+	object-fit:cover
+}
 
 
 /*--------------Contatos---------*/

@@ -63,3 +63,31 @@ if (target.length) {
 		animeScroll();
 	}, 50));
 }
+
+
+const areaProjects = document.querySelector('#content-projects')
+
+
+function renderProject() {
+	projects.forEach((item) => {
+		let link = document.createElement('a');
+		link.classList.add('area-img');
+		link.id = `project_${item.id}`;
+		link.onclick = function() {
+			displayModal(item.id);
+		}
+
+		let img = document.createElement('img');
+		img.src = `${item.url}`;
+		img.alt = `${item.name}: ${item.description}`
+
+		
+		link.appendChild(img);
+		areaProjects.appendChild(link);
+	});
+}
+renderProject();
+
+function displayModal(id) {
+alert(projects[id].name)
+}
