@@ -47,10 +47,12 @@
 					<a class="social-media" href="https://github.com/ianabreu" target="_blank" aria-label="github">
 						<i class="bi bi-github"></i>
 					</a>
-					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank" aria-label="linkedin">
+					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank"
+						aria-label="linkedin">
 						<i class="bi bi-linkedin"></i>
 					</a>
-					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank" aria-label="instagram">
+					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank"
+						aria-label="instagram">
 						<i class="bi bi-instagram"></i>
 					</a>
 
@@ -137,17 +139,68 @@
 
 				<div id="content-projects" class="content-projects"></div>
 
-				<div class="modal">
-					<div class="modal-area">
-						<div class="modal-container">
-							<h1>WhatsUp!</h1>
-							<h2>Um app de conversas em grupos.</h2>
-							<img src="./assets/projects-img/img1.jpg">
-							<a>Ver Site</a>
-							<a>Github</a>
+				<div id="modal" class="modal">
+					<a onclick="closeModal()" class="close-modal"><i class="bi bi-x"></i></a>
+
+					<div class="modal-container">
+						<h1 id="title">WhatsUp!</h1>
+						<h2 id="description">Um app de conversas em grupos.</h2>
+
+						<!-- <div class="area-slides">
+
+							<a class="arrows"><i class="bi bi-caret-left"></i></a>
+
+							<div class="slider">
+
+									<div class="slide">
+										<img src="./assets/projects-img/img1.jpg">
+									</div>
+									<div class="slide">
+										<img src="./assets/projects-img/img2.jpg">
+									</div>
+									<div class="slide">
+										<img src="./assets/projects-img/img3.jpg">
+									</div>
+									<div class="slide">
+										<img src="./assets/projects-img/img4.jpg">
+									</div>
+
+							</div>
+							<a class="arrows"><i class="bi bi-caret-right"></i></a>
+
+
+						</div> -->
+
+						<div id="slides-container" class="slides-container">
+
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+						<br>
+
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+							<span class="dot" onclick="currentSlide(4)"></span>
+						</div>
+
+
+
+
+
+
+						<div class="modal-area-btn">
+							<a target="_blank"><i class="bi bi-link-45deg"></i></a>
+							<a target="_blank"><i class="bi bi-github"></i></a>
 						</div>
 					</div>
 				</div>
+
+
+
+
 
 			</div>
 		</section>
@@ -158,19 +211,18 @@
 			<div class="my-contacts" data-anime="top">
 
 				<p>Se tiver interesse, entre em contato, estou quase sempre online!</p>
-				<a href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian" target="_blank" aria-label="whatsapp"
-					class="social-media"><i class="bi bi-whatsapp"></i> +55 77 99982-4116</a>
+				<a href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian" target="_blank"
+					aria-label="whatsapp" class="social-media"><i class="bi bi-whatsapp"></i> +55 77 99982-4116</a>
 
-				<a 
-				href="mailto:ianabreudev@gmail.com?subject=Ol%C3%A1%2C%20Ian" target="_blank" aria-label="email"
-				class="social-media"><i class="bi bi-envelope"></i> ianabreudev@gmail.com</a>
+				<a href="mailto:ianabreudev@gmail.com?subject=Ol%C3%A1%2C%20Ian" target="_blank" aria-label="email"
+					class="social-media"><i class="bi bi-envelope"></i> ianabreudev@gmail.com</a>
 				<div>
 					<a class="social-media" href="https://github.com/ianabreu" target="_blank" aria-label="github"><i
 							class="bi bi-github"></i></a>
-					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank" aria-label="linkedin"><i
-							class="bi bi-linkedin"></i></a>
-					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank" aria-label="instagram"><i
-							class="bi bi-instagram"></i></a>
+					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank"
+						aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
+					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank"
+						aria-label="instagram"><i class="bi bi-instagram"></i></a>
 				</div>
 
 
