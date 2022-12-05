@@ -94,15 +94,27 @@ function renderProject() {
 
 renderProject();
 
+function unloadScrollBars() {
+	document.documentElement.style.overflow = 'hidden';
+    document.body.scroll = "no"; // IE
+}
+function reloadScrollBars() {
+	document.documentElement.style.overflow = 'auto';
+    document.body.scroll = "yes"; // IE
+}
+
+
 const modal = document.getElementById('modal');
 
 function closeModal() {
 	modal.style.display = 'none';
+	reloadScrollBars();
 }
 
 function displayModal(project) {
 	modal.style.display = 'flex';
-	createItemModal(project)
+	unloadScrollBars();
+	createItemModal(project);
 	showSlides(slideIndex);
 }
 
