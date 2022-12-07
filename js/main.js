@@ -111,15 +111,8 @@ function closeModal() {
 	reloadScrollBars();
 }
 
-function blockPressBackButton() {
-	modal.style.display === 'flex' ? document.addEventListener('backbutton', closeModal, false)
-	: document.removeEventListener('backbutton')
-}
-	
-
 function displayModal(project) {
 	modal.style.display = 'flex';
-	blockPressBackButton();
 	unloadScrollBars();
 	createItemModal(project);
 	showSlides(slideIndex);
