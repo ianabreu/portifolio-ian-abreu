@@ -1,209 +1,304 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portifólio Ian Abreu</title>
+    <!--Icones-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="projects.js"></script>
+  </head>
 
-	<title>Portifólio Ian Abreu</title>
-	<!--Icones-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-	<!--Fontes-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-	<!--CSS-->
-	<link rel="stylesheet" href="css/style.css">
-	<script src="projects.js"></script>
+  <body>
+    <header id="menuColor" class="header-container">
+      <div class="header-content">
+        <p class="header-logo">Ian<span>Abreu</span></p>
 
-</head>
+        <nav class="header-menu">
+          <ul>
+            <li class="link" aria-label="Seção Inicial">
+              <a href="#home">Início</a>
+            </li>
+            <li class="link" aria-label="seção sobre">
+              <a href="#about">Sobre</a>
+            </li>
+            <li class="link" aria-label="seção portfolio">
+              <a href="#portfolio">Portifólio</a>
+            </li>
+            <li class="link" aria-label="seção contatos">
+              <a href="#contact">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<body>
-	<header id="menuColor" class="header-container">
-		<div class="header-content">
-			<p class="header-logo">Ian<span>Abreu</span></p>
+    <main class="main-container">
+      <section id="home">
+        <article class="home-content">
+          <h1>Ian Abreu</h1>
+          <p>Desenvolvedor Front-end Mobile / Web</p>
+          <p>HTML, CSS, Javascript</p>
+          <p>React Js, React Native</p>
+          <div>
+            <a
+              class="social-media"
+              href="https://github.com/ianabreu"
+              target="_blank"
+              aria-label="github"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+            <a
+              class="social-media"
+              href="https://www.linkedin.com/in/ian-abreu/"
+              target="_blank"
+              aria-label="linkedin"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              class="social-media"
+              href="https://www.instagram.com/ianabreu.dev/"
+              target="_blank"
+              aria-label="instagram"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+          <a
+            href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian"
+            target="_blank"
+            class="cta-button"
+          >
+            <i class="bi bi-whatsapp">Vamos Conversar</i>
+          </a>
+        </article>
+      </section>
 
-			<nav class="header-menu">
-				<ul>
-					<li class="link" aria-label="Seção Inicial"><a href="#home">Início</a></li>
-					<li class="link" aria-label="seção sobre"><a href="#about">Sobre</a></li>
-					<li class="link" aria-label="seção portfolio"><a href="#portfolio">Portifólio</a></li>
-					<li class="link" aria-label="seção contatos"><a href="#contact">Contatos</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+      <section id="about">
+        <div class="about-container">
+          <h2 class="title-section" data-anime="top">Sobre</h2>
 
-	<main class='main-container'>
+          <article class="about-content">
+            <article class="about-text-area" data-anime="left">
+              <div class="about-btn-text">
+                <h6
+                  class="btn-h6 active"
+                  onclick="displayText('biography', 'carreira')"
+                >
+                  Sobre
+                </h6>
+                <h6
+                  class="btn-h6"
+                  onclick="displayText('carreira', 'biography')"
+                >
+                  Carreira
+                </h6>
+              </div>
 
-		<section id="home">
+              <div id="biography">
+                <p>
+                  Sempre fui apaixonado por tecnologias e curioso sobre como
+                  elas funcionavam. No ano de 2021, iniciei uma jornada de
+                  estudos em desenvolvimento Mobile e Web, e desde então tenho
+                  me empenhado ao máximo para aprimorar minhas habilidades.
+                </p>
 
-			<article class="home-content">
-				<h1>Ian Abreu</h1>
-				<p>Desenvolvedor Front-end Mobile / Web</p>
-				<p>HTML, CSS, Javascript</p>
-				<p>React Js, React Native</p>
-				<div>
-					<a class="social-media" href="https://github.com/ianabreu" target="_blank" aria-label="github">
-						<i class="bi bi-github"></i>
-					</a>
-					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank"
-						aria-label="linkedin">
-						<i class="bi bi-linkedin"></i>
-					</a>
-					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank"
-						aria-label="instagram">
-						<i class="bi bi-instagram"></i>
-					</a>
+                <p>
+                  Destaco-me pela minha facilidade em aprender novas tecnologias
+                  e pela minha determinação em aplicar os conhecimentos
+                  adquiridos nos meus projetos. Acredito que a prática constante
+                  é fundamental para o crescimento profissional.
+                </p>
 
-				</div>
-				<a href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian" target="_blank"
-					class="cta-button">
-					<i class="bi bi-whatsapp"> </i>Vamos Conversar</i>
-				</a>
-			</article>
-		</section>
+                <p>
+                  Estou em busca da minha primeira oportunidade de trabalho na
+                  área, onde poderei contribuir com minhas habilidades e
+                  adquirir experiência real em um ambiente profissional.
+                </p>
 
-		<section id="about">
+                <p>
+                  Meu objetivo é desenvolver soluções inovadoras e colaborar com
+                  uma equipe talentosa, compartilhando conhecimentos e crescendo
+                  juntos. Estou confiante de que, com minha paixão pela
+                  tecnologia e minha sede de aprendizado, serei capaz de
+                  enfrentar qualquer desafio que surgir.
+                </p>
 
-			<div class="about-container">
+                <p>
+                  Estou entusiasmado para começar minha carreira como
+                  desenvolvedor e estou aberto a novas oportunidades e desafios
+                  que me permitam expandir meu conhecimento e alcançar
+                  resultados significativos.
+                </p>
+              </div>
+              <div id="carreira">
+                <p>
+                  Nos últimos 10 anos, atuei em uma rede de supermercados como
+                  correspondente bancário, o que me proporcionou o
+                  desenvolvimento de diversas habilidades interpessoais, como
+                  trabalho em equipe, comunicação, pensamento crítico e
+                  capacidade de tomar decisões.
+                </p>
+                <p>
+                  Atualmente, busco realizar uma transição de carreira para a
+                  área de TI. Estou em busca de oportunidades que me permitam
+                  desenvolver minhas habilidades em conjunto com meus colegas de
+                  equipe, enquanto embarco nessa nova jornada profissional.
+                </p>
+              </div>
+            </article>
 
-				<h2 class="title-section" data-anime="top">Sobre</h2>
+            <aside class="about-img-area" data-anime="right">
+              <img src="assets/perfil.png" alt="" />
+            </aside>
+          </article>
 
-				<article class="about-content">
+          <article id="tech" class="about-content">
+            <aside class="about-img-tech" data-anime="left">
+              <img src="assets/techs.png" alt="" />
+            </aside>
 
-					<article class="about-text-area" data-anime="left">
-						<div class="about-btn-text">
-							<h6 class="btn-h6 active" onclick="displayText('biography', 'carreira')">Sobre</h6>
-							<h6 class="btn-h6" onclick="displayText('carreira', 'biography')">Carreira</h6>
-						</div>
+            <div class="about-text-area" data-anime="right">
+              <div class="about-btn-text">
+                <h6 class="btn-h6 active">Habilidades</h6>
+              </div>
 
-						<div id="biography">
-							<p>Desde pequeno sempre fui apaixonado por tecnologias e sempre com curiosidade de como tudo
-								funcionava. Em 2021 comecei minha jornada de estudos em desenvolvimento Mobile e Web.
-							</p>
-							<p>Tenho muita facilidade em aprender novas tecnologias e sempre busco aplicar meus
-								conhecimentos adquiridos em projetos próprios.</p>
-							<p>Sou um desenvolvedor <em>front-end</em> com o desejo de sempre aprender e evoluir
-								profissionalmente em equipe.</p>
+              <div id="skills">
+                <p>
+                  <strong>HTML5:</strong> Experiência em projetar páginas web
+                  com HTML semântico.
+                </p>
+                <p>
+                  <strong>CSS3:</strong> Conhecimento em Flexbox, Grid e Design
+                  Responsivo.
+                </p>
+                <p>
+                  <strong>JavaScript:</strong> Habilidade em operações com
+                  Arrays, manipulação de DOM, requisições...
+                </p>
+                <p>
+                  <strong>React Js e React Native:</strong> Proficiente em React
+                  Hooks, Styled Components, Axios e integração com banco de
+                  dados do Firebase.
+                </p>
+                <p>
+                  Atualmente estudando
+                  <strong
+                    >Node.js, Typescript e bancos de dados SQL e NoSQL como o
+                    PostgresSQL e o MongoDB</strong
+                  >.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-						</div>
-						<div id="carreira">
-							<p>Há mais de 10 anos, trabalho em uma rede de supermercados como correspondente bancário,
-								onde
-								desenvolvi muitas <em>soft skills</em> como trabalho em equipe, comunicação, pensamento
-								crítico e capacidade de tomar decisões.</p>
-							<p>Pretendo fazer transição de carreira para a área de TI. No momento, estou procurando
-								oportunidades para desenvolver minhas habilidades ao lado dos meus colegas de equipe.
-							</p>
-						</div>
-					</article>
+      <section id="portfolio">
+        <div class="portfolio-container">
+          <h2 class="title-section" data-anime="top">Portfólio</h2>
 
-					<aside class="about-img-area" data-anime="right">
-						<img src="assets/perfil.png" alt="" />
-					</aside>
+          <div id="content-projects" class="content-projects"></div>
 
+          <div id="modal" class="modal">
+            <a onclick="closeModal()" class="close-modal"
+              ><i class="bi bi-x"></i
+            ></a>
 
-				</article>
+            <div class="modal-container">
+              <h1 id="title"></h1>
+              <h2 id="description"></h2>
 
-				<article id="tech" class="about-content">
+              <div id="slides-container" class="slides-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
 
-					<aside class="about-img-tech" data-anime="left">
-						<img src="assets/techs.png" alt="" />
-					</aside>
+              <br />
+              <div class="dots-area">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
 
-					<div class="about-text-area" data-anime="right">
-						<div class="about-btn-text">
-							<h6 class="btn-h6 active">Habilidades</h6>
-						</div>
+              <div class="modal-area-btn">
+                <a id="linkButton" target="_blank"
+                  ><i class="bi bi-link-45deg"></i
+                ></a>
+                <a id="githubButton" target="_blank"
+                  ><i class="bi bi-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-						<div id="skills">
-							<p><strong>HTML5:</strong> Projetando páginas web com HTML semântico.</p>
-							<p><strong>CSS3:</strong> Flexbox, Grid e Design Responsivo.</p>
-							<p><strong>JavaScript:</strong> Operações com Arrays, manipulação de DOM, requisições...</p>
-							<p><strong>React Js e React Native:</strong> React Hooks, Styled Components, Axios,
-								integração
-								com Firebase...</p>
-							<p>Atualmente estudando <strong>Node js, Typescript e Mongo db</strong>.</p>
-						</div>
-					</div>
-				</article>
-			</div>
+      <section id="contact">
+        <h2 class="title-section-dark" data-anime="top">Contato</h2>
 
-		</section>
+        <div class="my-contacts" data-anime="top">
+          <p>Fique a vontade para entrar em contato, estou à disposição!</p>
+          <a
+            href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian"
+            target="_blank"
+            aria-label="whatsapp"
+            class="social-media"
+            ><i class="bi bi-whatsapp"></i> +55 77 99982-4116</a
+          >
 
-		<section id="portfolio">
-			<div class="portfolio-container">
+          <a
+            href="mailto:ianabreudev@gmail.com?subject=Ol%C3%A1%2C%20Ian"
+            target="_blank"
+            aria-label="email"
+            class="social-media"
+            ><i class="bi bi-envelope"></i> ianabreudev@gmail.com</a
+          >
+          <div>
+            <a
+              class="social-media"
+              href="https://github.com/ianabreu"
+              target="_blank"
+              aria-label="github"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a
+              class="social-media"
+              href="https://www.linkedin.com/in/ian-abreu/"
+              target="_blank"
+              aria-label="linkedin"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a
+              class="social-media"
+              href="https://www.instagram.com/ianabreu.dev/"
+              target="_blank"
+              aria-label="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; <span id="footer"></span></p>
+    </footer>
 
-				<h2 class="title-section" data-anime="top">Portfólio</h2>
-
-				<div id="content-projects" class="content-projects"></div>
-
-				<div id="modal" class="modal">
-					<a onclick="closeModal()" class="close-modal"><i class="bi bi-x"></i></a>
-
-					<div class="modal-container">
-						<h1 id="title"></h1>
-						<h2 id="description"></h2>
-
-						<div id="slides-container" class="slides-container">
-							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-							<a class="next" onclick="plusSlides(1)">&#10095;</a>
-						</div>
-
-						<br>
-						<div class="dots-area">
-							<span class="dot" onclick="currentSlide(1)"></span>
-							<span class="dot" onclick="currentSlide(2)"></span>
-							<span class="dot" onclick="currentSlide(3)"></span>
-						</div>
-
-						<div class="modal-area-btn">
-							<a id="linkButton" target="_blank"><i class="bi bi-link-45deg"></i></a>
-							<a id="githubButton" target="_blank"><i class="bi bi-github"></i></a>
-						</div>
-					</div>
-				</div>
-
-
-
-
-
-			</div>
-		</section>
-
-		<section id="contact">
-			<h2 class="title-section-dark" data-anime="top">Contato</h2>
-
-			<div class="my-contacts" data-anime="top">
-
-				<p>Se tiver interesse, entre em contato, estou quase sempre online!</p>
-				<a href="https://api.whatsapp.com/send?phone=5577999824116&text=Ol%C3%A1%2C%20Ian" target="_blank"
-					aria-label="whatsapp" class="social-media"><i class="bi bi-whatsapp"></i> +55 77 99982-4116</a>
-
-				<a href="mailto:ianabreudev@gmail.com?subject=Ol%C3%A1%2C%20Ian" target="_blank" aria-label="email"
-					class="social-media"><i class="bi bi-envelope"></i> ianabreudev@gmail.com</a>
-				<div>
-					<a class="social-media" href="https://github.com/ianabreu" target="_blank" aria-label="github"><i
-							class="bi bi-github"></i></a>
-					<a class="social-media" href="https://www.linkedin.com/in/ian-abreu/" target="_blank"
-						aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
-					<a class="social-media" href="https://www.instagram.com/ianabreu.dev/" target="_blank"
-						aria-label="instagram"><i class="bi bi-instagram"></i></a>
-				</div>
-
-
-			</div>
-		</section>
-
-	</main>
-	<footer>
-		2022 Copyright Ian Abreu
-	</footer>
-
-
-
-	<script type="text/javascript" src="js/main.js"></script>
-</body>
-
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
