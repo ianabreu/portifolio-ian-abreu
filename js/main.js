@@ -136,7 +136,7 @@ function createImagesSlider(url) {
 
   let img = document.createElement("img");
   img.src = url;
-  img.style = "width:100%";
+  img.style = "width:80%; display:flex; align-items: center; object-fit: cover";
 
   div.appendChild(img);
   slidesContainer.appendChild(div);
