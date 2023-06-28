@@ -132,11 +132,13 @@ function createItemModal(project) {
 function createImagesSlider(url) {
   const slidesContainer = document.getElementById("slides-container");
   let div = document.createElement("div");
-  div.classList = "mySlides fade";
+  div.classList = "mySlides";
+  div.style = "width:100%";
 
   let img = document.createElement("img");
   img.src = url;
-  img.style = "width:80%; display:flex; align-items: center; object-fit: cover";
+  img.style =
+    "width:100%; display:flex; align-items: center; object-fit: cover";
 
   div.appendChild(img);
   slidesContainer.appendChild(div);

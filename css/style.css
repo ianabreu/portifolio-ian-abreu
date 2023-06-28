@@ -399,7 +399,7 @@ main {
 }
 
 .area-img:hover {
-	transform: scale(1.02);
+	transform: scale(1.03);
 }
 
 .area-img:active {
@@ -408,6 +408,7 @@ main {
 
 .area-img img {
 	width: inherit;
+	object-fit: cover;
 }
 
 /* ------------Modal----------- */
@@ -424,19 +425,25 @@ main {
 	width: 100vw;
 	height: 100vh;
 
-	background-color: var(--black-transparent);
 	z-index: 1000;
 }
 
 .close-modal {
-	position: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-color: var(--black-transparent);
+	width: 100%;
+	height: 100%;
+	/* position: fixed;
 	top: 1rem;
 	right: 1rem;
 
 	font-size: 2.5rem;
 	line-height: 2.5rem;
 
-	color: var(--white);
+	color: var(--white); */
 }
 
 .modal-container {
@@ -447,6 +454,7 @@ main {
 
 	width: 95%;
 	max-width: 900px;
+	border-radius: 0.5rem;
 
 	background-color: var(--white);
 }
@@ -459,6 +467,8 @@ main {
 .modal-container h3 {
 	font-size: 0.9rem;
 	margin-bottom: 1rem;
+	width: 70%;
+	text-align: center;
 }
 
 .modal-area-btn {
@@ -501,23 +511,32 @@ main {
 .mySlides img {
 	width: 80%;
 	aspect-ratio: 16 / 9;
-	max-height: 80vh;
+	/* max-height: 80vh; */
 	overflow: hidden;
 	margin: auto;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .prev, .next {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
-	margin-top: -1.4rem;
+	top: 0%;
+	height: 100%;
 	padding: 1rem;
-	color: var(--black);
+	color: var(--white);
 	font-weight: bold;
-	font-size: 1.5rem;
 	transition: all 0.3s ease;
 	-webkit-user-select: none;
 	user-select: none;
+}
+
+.prev a, .next a {
+	font-size: 2rem;
+
 }
 
 .next {
@@ -525,7 +544,6 @@ main {
 }
 
 .prev:hover, .next:hover {
-	color: var(--white);
 	background-color: var(--black-transparent);
 }
 
@@ -549,22 +567,6 @@ main {
 .active-dot, .dot:hover {
 	background-color: var(--green-600);
 }
-
-.fade {
-	animation-name: fade;
-	animation-duration: 2s;
-}
-
-@keyframes fade {
-	from {
-		opacity: .5
-	}
-
-	to {
-		opacity: 1
-	}
-}
-
 
 /*--------------Contatos---------*/
 #contact {
@@ -658,7 +660,7 @@ footer {
 	}
 
 	.modal-container {
-		width: 75%;
+		width: 95%;
 	}
 }
 
@@ -740,7 +742,7 @@ footer {
 	}
 
 	.modal-container {
-		width: 85%;
+		width: 95%;
 	}
 
 	.header-content {

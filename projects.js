@@ -1,8 +1,9 @@
 const projects = [
   {
     id: 0,
-    name: "WhatsUp!",
-    description: "Um app de conversas em grupos.",
+    name: "PopCine",
+    description:
+      "Um aplicativo para encontrar informações sobre filmes, incluindo detalhes sobre filmes populares, próximos lançamentos, avaliações, elenco e salvar como favorito.",
     category: "Aplicativos",
     images: [
       "./assets/projects-img/img1.jpg",
@@ -10,7 +11,7 @@ const projects = [
       "./assets/projects-img/img3.jpg",
     ],
     url: "./assets/projects-img/img1.jpg",
-    github: "",
+    github: "https://github.com/ianabreu/popcine",
   },
   {
     id: 1,
@@ -54,16 +55,17 @@ const projects = [
   },
   {
     id: 4,
-    name: "FinançasApp",
-    description: "Um app de financas.",
-    category: "Aplicativos",
+    name: "Spotify Clone",
+    description:
+      "Cópia do site do Spotify proposta a partir de um curso onde o projeto inicial era construir um layout responsivo que se adapta em qualquer dispositivo.",
+    category: "Web",
     images: [
       "./assets/projects-img/img4.jpg",
       "./assets/projects-img/img3.jpg",
       "./assets/projects-img/img2.jpg",
     ],
     url: "./assets/projects-img/img4.jpg",
-    github: "",
+    github: "https://github.com/ianabreu/spotify-clone",
   },
   {
     id: 5,
