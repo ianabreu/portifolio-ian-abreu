@@ -43,7 +43,7 @@ let target = document.querySelectorAll("[data-anime]");
 const animationClass = "animate";
 
 function animeScroll() {
-  const windowTop = window.scrollY + window.innerHeight * 0.95;
+  const windowTop = window.scrollY + window.innerHeight * 0.98;
   target.forEach(function (item) {
     if (windowTop > item.offsetTop) {
       item.classList.add(animationClass);
@@ -68,7 +68,6 @@ const areaProjects = document.querySelector("#content-projects");
 function renderProject() {
   projects.forEach((item) => {
     let link = document.createElement("a");
-    // link.classList.add('area-img');
     link.dataset.anime = "top";
     link.id = `project_${item.id}`;
     link.onclick = function () {
@@ -110,7 +109,7 @@ function displayModal(project) {
   modal.style.display = "flex";
   unloadScrollBars();
   createItemModal(project);
-  showSlides(slideIndex);
+  eventDrag();
 }
 
 function createItemModal(project) {
@@ -120,58 +119,128 @@ function createItemModal(project) {
   let description = document.getElementById("description");
   description.innerText = project.description;
 
-  project.images.forEach((url) => {
-    createImagesSlider(url);
-  });
+  createSlider(project.images);
+
   let linkButton = document.getElementById("linkButton");
   let githubButton = document.getElementById("githubButton");
   linkButton.href = project.github;
   githubButton.href = project.github;
 }
+const slides = document.getElementById("slides");
 
-function createImagesSlider(url) {
-  const slidesContainer = document.getElementById("slides-container");
-  let div = document.createElement("div");
-  div.classList = "mySlides";
-  div.style = "width:100%";
+function createSlider(urlImages) {
+  urlImages.forEach((url, index) => {
+    createInputRadio(index);
+  });
+  urlImages.forEach((url, index) => {
+    createImageDraggable(url, index);
+  });
+  urlImages.forEach((url, index) => {
+    createNavigation(url, index);
+  });
+}
+function createInputRadio(index) {
+  let inputRadio = document.createElement("input");
+  inputRadio.type = "radio";
+  inputRadio.name = `radio-btn`;
+  inputRadio.id = `radio${index}`;
+  slides.insertBefore(inputRadio, slides.lastElementChild);
+}
+function createImageDraggable(url, index) {
+  let divSlide = document.createElement("div");
+  divSlide.className = "slide";
+  if (index === 0) divSlide.classList.add("first");
 
-  let img = document.createElement("img");
-  img.src = url;
-  img.style =
-    "width:100%; display:flex; align-items: center; object-fit: cover";
+  let imgDraggable = document.createElement("img");
+  imgDraggable.className = "draggable";
+  imgDraggable.src = url;
 
-  div.appendChild(img);
-  slidesContainer.appendChild(div);
+  divSlide.appendChild(imgDraggable);
+  slides.insertBefore(divSlide, slides.lastElementChild);
 }
 
-let slideIndex = 1;
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+function createNavigation(url, index) {
+  let divNavigationAuto = document.getElementById("navigation-auto");
+  let autoBtn = document.createElement("div");
+  autoBtn.className = `auto-btn${index}`;
+  divNavigationAuto.appendChild(autoBtn);
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active-dot", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active-dot";
+  let divManualNavigation = document.getElementById("manual-navigation");
+  let manualBtn = document.createElement("label");
+  manualBtn.className = "manual-btn";
+  manualBtn.htmlFor = `radio${index}`;
+  divManualNavigation.appendChild(manualBtn);
 }
 
+//--------------- Arrastar Slides -------------------------
+
+let count = 0;
+function nextImage(direction, arrayImages) {
+  let limit = arrayImages - 1;
+  if (direction === "left") {
+    count++;
+    if (count > limit) count = 0;
+  }
+  if (direction === "right") {
+    count--;
+    if (count < 0) count = limit;
+  }
+  console.log(document.getElementById(`radio${count}`));
+  document.getElementById(`radio${count}`).checked = true;
+}
+
+const draggable = document.getElementsByClassName("draggable");
+let initialX;
+let direction;
+
+function eventDrag() {
+  for (let index = 0; index < draggable.length; index++) {
+    draggable[index].addEventListener("mousedown", startDragging);
+    draggable[index].addEventListener("touchstart", startDragging);
+
+    draggable[index].addEventListener("mousemove", drag);
+    draggable[index].addEventListener("touchmove", drag);
+
+    draggable[index].addEventListener("mouseup", (event) => {
+      stopDragging(event, draggable.length);
+    });
+    draggable[index].addEventListener("touchend", (event) => {
+      stopDragging(event, draggable.length);
+    });
+  }
+}
+
+function startDragging(event) {
+  if (event.type === "mousedown") {
+    initialX = event.clientX;
+  } else if (event.type === "touchstart") {
+    initialX = event.touches[0].clientX;
+  }
+}
+
+function drag(event) {
+  event.preventDefault();
+
+  if (initialX === undefined) return;
+
+  let currentX;
+
+  if (event.type === "mousemove") {
+    currentX = event.clientX;
+  } else if (event.type === "touchmove") {
+    currentX = event.touches[0].clientX;
+  }
+
+  let deltaX = currentX - initialX;
+  direction = deltaX > 0 ? "right" : "left";
+}
+
+function stopDragging(event, arrayLength) {
+  nextImage(direction, arrayLength);
+  initialX = undefined;
+}
+
+//-------------------------Footer date ----------------------------------------
 const footerElement = document.getElementById("footer");
 const currentYear = new Date().getFullYear();
 footerElement.textContent = `${currentYear} Copyright Ian Abreu`;

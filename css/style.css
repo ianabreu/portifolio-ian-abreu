@@ -386,9 +386,16 @@ main {
 }
 
 .area-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	margin: 0.5rem;
 	width: 20rem;
-	height: 11.25rem;
+	height: 15rem;
+
+	padding: 1rem;
+
 	overflow: hidden;
 	border-radius: 0.5rem;
 
@@ -396,6 +403,10 @@ main {
 	-moz-box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
 	box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
 	transition: all 0.3s;
+
+
+	background: url(../assets/bg1.png), url(../assets/bg1.png), linear-gradient(50deg, var(--green-900), var(--green-100));
+	background-position: center;
 }
 
 .area-img:hover {
@@ -407,8 +418,9 @@ main {
 }
 
 .area-img img {
-	width: inherit;
-	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 /* ------------Modal----------- */
@@ -436,14 +448,6 @@ main {
 	background-color: var(--black-transparent);
 	width: 100%;
 	height: 100%;
-	/* position: fixed;
-	top: 1rem;
-	right: 1rem;
-
-	font-size: 2.5rem;
-	line-height: 2.5rem;
-
-	color: var(--white); */
 }
 
 .modal-container {
@@ -452,7 +456,8 @@ main {
 	justify-content: center;
 	align-items: center;
 
-	width: 95%;
+	width: 80vw;
+	height: 95vh;
 	max-width: 900px;
 	border-radius: 0.5rem;
 
@@ -497,76 +502,130 @@ main {
 }
 
 /*--------------- Slides ---------------*/
-.slides-container {
-	max-width: 1200px;
-	position: relative;
-	margin: auto;
-}
-
-.mySlides {
-	display: none;
-	width: 100%;
-}
-
-.mySlides img {
-	width: 80%;
-	aspect-ratio: 16 / 9;
-	/* max-height: 80vh; */
+.slider {
+	margin: 0 auto;
+	width: 800px;
+	height: 400px;
 	overflow: hidden;
-	margin: auto;
-	-webkit-user-select: none;
-	user-select: none;
 }
 
-.prev, .next {
+.slides {
+	width: 400%;
+	height: 400px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	position: absolute;
-	top: 0%;
-	height: 100%;
-	padding: 1rem;
-	color: var(--white);
-	font-weight: bold;
-	transition: all 0.3s ease;
-	-webkit-user-select: none;
-	user-select: none;
 }
 
-.prev a, .next a {
-	font-size: 2rem;
-
+.slides input {
+	display: none;
 }
 
-.next {
-	right: 0;
-}
-
-.prev:hover, .next:hover {
-	background-color: var(--black-transparent);
-}
-
-.dots-area {
-	text-align: center;
+.slide {
+	width: 25%;
 	position: relative;
-	bottom: 3rem;
+	transition: 1.5s;
 }
 
-.dot {
+.slide img {
+	width: 800px;
+}
+
+.draggable {
+	cursor: grab;
+}
+
+.draggable:active {
+	cursor: grabbing;
+}
+
+#manual-navigation {
+	position: absolute;
+	width: 800px;
+	margin-top: -40px;
+	display: flex;
+	justify-content: center;
+}
+
+.manual-btn {
+	border: 1px solid var(--green-100);
+	padding: 5px;
+	border-radius: 10px;
 	cursor: pointer;
-	height: .8rem;
-	width: .8rem;
-	margin: 0 0.2rem;
-	background-color: var(--white);
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.3s ease;
+	transition: 1s;
 }
 
-.active-dot, .dot:hover {
+.manual-btn:not(:last-child) {
+	margin-right: 40px;
+}
+
+.manual-btn:hover {
+	background-color: #58B860;
+}
+
+#radio0:checked~.first {
+	margin-left: 0;
+}
+
+#radio1:checked~.first {
+	margin-left: -25%;
+}
+
+#radio2:checked~.first {
+	margin-left: -50%;
+}
+
+#radio3:checked~.first {
+	margin-left: -75%;
+}
+
+#radio4:checked~.first {
+	margin-left: -100%;
+}
+
+#radio5:checked~.first {
+	margin-left: -125%;
+}
+
+#radio6:checked~.first {
+	margin-left: -150%;
+}
+
+#navigation-auto div {
+	border: 1px solid var(--green-100);
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+
+}
+
+#navigation-auto {
+	position: absolute;
+	width: 800px;
+	margin-top: 360px;
+	display: flex;
+	justify-content: center;
+}
+
+#navigation-auto div:not(:last-child) {
+	margin-right: 40px;
+}
+
+/*-----Limite de 10 imagens no slider------*/
+#radio0:checked~#navigation-auto .auto-btn0,
+#radio1:checked~#navigation-auto .auto-btn1,
+#radio2:checked~#navigation-auto .auto-btn2,
+#radio3:checked~#navigation-auto .auto-btn3,
+#radio4:checked~#navigation-auto .auto-btn4,
+#radio5:checked~#navigation-auto .auto-btn5,
+#radio6:checked~#navigation-auto .auto-btn6,
+#radio7:checked~#navigation-auto .auto-btn7,
+#radio8:checked~#navigation-auto .auto-btn8,
+#radio9:checked~#navigation-auto .auto-btn9,
+#radio10:checked~#navigation-auto .auto-btn10 {
 	background-color: var(--green-600);
 }
+
+
 
 /*--------------Contatos---------*/
 #contact {

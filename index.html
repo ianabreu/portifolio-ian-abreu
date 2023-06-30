@@ -225,24 +225,16 @@
 
           <div id="modal" class="modal">
             <div onclick="closeModal()" class="close-modal"></div>
-            <!-- <a onclick="closeModal()" class="close-modal"
-              ><i class="bi bi-x"></i
-            ></a> -->
 
             <div class="modal-container">
               <h2 id="title"></h2>
               <h3 id="description"></h3>
 
-              <div id="slides-container" class="slides-container">
-                <div class="prev"><a onclick="plusSlides(-1)">&#10094;</a></div>
-                <div class="next"><a onclick="plusSlides(1)">&#10095;</a></div>
-              </div>
-
-              <br />
-              <div class="dots-area">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+              <div class="slider">
+                <div id="slides" class="slides">
+                  <div id="navigation-auto"></div>
+                </div>
+                <div id="manual-navigation"></div>
               </div>
 
               <div class="modal-area-btn">
