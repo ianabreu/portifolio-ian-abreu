@@ -102,6 +102,7 @@ const modal = document.getElementById("modal");
 
 function closeModal() {
   modal.style.display = "none";
+  deleteItemModal();
   reloadScrollBars();
 }
 
@@ -110,6 +111,27 @@ function displayModal(project) {
   unloadScrollBars();
   createItemModal(project);
   eventDrag();
+}
+const slider = document.getElementById("slider");
+const slides = document.getElementById("slides");
+
+function deleteItemModal() {
+  const inputElements = slider.querySelectorAll("input");
+  if (inputElements.length > 0)
+    inputElements.forEach((inputElement) => {
+      inputElement.remove();
+    });
+  while (slides.firstChild) {
+    slides.removeChild(slides.firstChild);
+  }
+  let divNavigationAuto = document.getElementById("navigation-auto");
+  while (divNavigationAuto.firstChild) {
+    divNavigationAuto.removeChild(divNavigationAuto.firstChild);
+  }
+  let divManualNavigation = document.getElementById("manual-navigation");
+  while (divManualNavigation.firstChild) {
+    divManualNavigation.removeChild(divManualNavigation.firstChild);
+  }
 }
 
 function createItemModal(project) {
@@ -126,7 +148,6 @@ function createItemModal(project) {
   linkButton.href = project.github;
   githubButton.href = project.github;
 }
-const slides = document.getElementById("slides");
 
 function createSlider(urlImages) {
   urlImages.forEach((url, index) => {
@@ -144,7 +165,7 @@ function createInputRadio(index) {
   inputRadio.type = "radio";
   inputRadio.name = `radio-btn`;
   inputRadio.id = `radio${index}`;
-  slides.insertBefore(inputRadio, slides.lastElementChild);
+  slider.insertBefore(inputRadio, slides);
 }
 function createImageDraggable(url, index) {
   let divSlide = document.createElement("div");
@@ -156,7 +177,7 @@ function createImageDraggable(url, index) {
   imgDraggable.src = url;
 
   divSlide.appendChild(imgDraggable);
-  slides.insertBefore(divSlide, slides.lastElementChild);
+  slides.appendChild(divSlide);
 }
 
 function createNavigation(url, index) {
@@ -185,7 +206,6 @@ function nextImage(direction, arrayImages) {
     count--;
     if (count < 0) count = limit;
   }
-  console.log(document.getElementById(`radio${count}`));
   document.getElementById(`radio${count}`).checked = true;
 }
 
