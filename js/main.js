@@ -78,10 +78,15 @@ function renderProject() {
 
     let img = document.createElement("img");
     img.src = `${item.url}`;
-    img.alt = `${item.name}: ${item.description}`;
+    img.alt = `${item.name}`;
+
+    let title = document.createElement("h2");
+    title.innerText = `${item.name}`;
+    title.classList.add("title-project");
 
     div.appendChild(img);
     link.appendChild(div);
+    link.appendChild(title);
     areaProjects.appendChild(link);
   });
   target = document.querySelectorAll("[data-anime]");
@@ -107,10 +112,10 @@ function closeModal() {
 }
 
 function displayModal(project) {
-  modal.style.display = "flex";
   unloadScrollBars();
   createItemModal(project);
   eventDrag();
+  modal.style.display = "flex";
 }
 const slider = document.getElementById("slider");
 const slides = document.getElementById("slides");
@@ -165,6 +170,9 @@ function createInputRadio(index) {
   inputRadio.type = "radio";
   inputRadio.name = `radio-btn`;
   inputRadio.id = `radio${index}`;
+  if (inputRadio.id === "radio0") {
+    inputRadio.setAttribute("checked", true);
+  }
   slider.insertBefore(inputRadio, slides);
 }
 function createImageDraggable(url, index) {

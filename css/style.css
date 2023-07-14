@@ -389,6 +389,7 @@ main {
 }
 
 .area-img {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -424,6 +425,12 @@ main {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+}
+
+.title-project {
+	text-align: center;
+	font-size: 1rem;
+	margin-bottom: 1rem;
 }
 
 /* ------------Modal----------- */
@@ -468,11 +475,11 @@ main {
 }
 
 .modal-container h2 {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 }
 
 .modal-container h3 {
-	font-size: 0.8rem;
+	font-size: 1rem;
 	text-align: left;
 	margin: 0.5rem 0;
 	max-width: var(--width-slide);
