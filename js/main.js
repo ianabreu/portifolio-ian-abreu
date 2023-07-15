@@ -150,7 +150,7 @@ function createItemModal(project) {
 
   let linkButton = document.getElementById("linkButton");
   let githubButton = document.getElementById("githubButton");
-  linkButton.href = project.github;
+  linkButton.href = project.demo;
   githubButton.href = project.github;
 }
 
