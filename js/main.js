@@ -84,9 +84,9 @@ function renderProject() {
     title.innerText = `${item.name}`;
     title.classList.add("title-project");
 
+    div.appendChild(title);
     div.appendChild(img);
     link.appendChild(div);
-    link.appendChild(title);
     areaProjects.appendChild(link);
   });
   target = document.querySelectorAll("[data-anime]");

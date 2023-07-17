@@ -391,10 +391,11 @@ main {
 .area-img {
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
-	margin: 0.5rem;
+	/* margin: 0.5rem; */
 	width: 20rem;
 	height: 15rem;
 
@@ -402,15 +403,15 @@ main {
 
 	overflow: hidden;
 	border-radius: 0.5rem;
-
-	-webkit-box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
-	-moz-box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
-	box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
 	transition: all 0.3s;
 
+	/* -webkit-box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
+	-moz-box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1);
+	box-shadow: 4px 4px 15px -6px rgba(23, 28, 22, 1); */
 
-	background: url(../assets/bg1.png), url(../assets/bg1.png), linear-gradient(50deg, var(--green-900), var(--green-100));
-	background-position: center;
+
+	/* background: url(../assets/bg1.png), url(../assets/bg1.png), linear-gradient(50deg, var(--green-900), var(--green-100));
+	background-position: center; */
 }
 
 .area-img:hover {
@@ -430,7 +431,7 @@ main {
 .title-project {
 	text-align: center;
 	font-size: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 /* ------------Modal----------- */
@@ -781,11 +782,13 @@ footer {
 @media(max-width: 480px) {
 	.header-container {
 		margin: 0;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
 	}
 
 	.header-content {
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: space-between;
 		max-width: 90%;
 	}
 
