@@ -24,7 +24,7 @@ const projects = [
     category: "App",
     images: ["./assets/popcine/img0.jpg", "./assets/popcine/img1.jpg"],
     url: "./assets/popcine/cover.png",
-    demo: "https://ian-abreu.netlify.app/",
+    demo: "https://github.com/ianabreu/popcine",
     github: "https://github.com/ianabreu/popcine",
   },
 ];

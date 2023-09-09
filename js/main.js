@@ -107,6 +107,7 @@ const modal = document.getElementById("modal");
 
 function closeModal() {
   modal.style.display = "none";
+  linkButton.style.display = "flex";
   deleteItemModal();
   reloadScrollBars();
 }
@@ -119,6 +120,7 @@ function displayModal(project) {
 }
 const slider = document.getElementById("slider");
 const slides = document.getElementById("slides");
+const linkButton = document.getElementById("linkButton");
 
 function deleteItemModal() {
   const inputElements = slider.querySelectorAll("input");
@@ -148,9 +150,11 @@ function createItemModal(project) {
 
   createSlider(project.images);
 
-  let linkButton = document.getElementById("linkButton");
   let githubButton = document.getElementById("githubButton");
   linkButton.href = project.demo;
+  if (project.category === "App") {
+    linkButton.style.display = "none";
+  }
   githubButton.href = project.github;
 }
 
