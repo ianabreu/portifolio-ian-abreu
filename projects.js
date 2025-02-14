@@ -1,18 +1,20 @@
 const projects = [
   {
     id: 0,
-    name: "Tech Store",
+    name: "Meus Chamados",
     description:
-      "Projeto de um e-commerce desenvolvido em NextJs, Typescript, Prisma e PostgreSQL, com autenticação do google, listagem de categorias e produtos, carrinho de compras e pagamentos com Stripe.",
+      "Aplicação de gerenciamento de chamados com cadastro de clientes, abertura de chamados vinculados ao cliente com estados de progresso, tela de perfil da loja. Criei uma API para persistência no banco de dados, garantindo a segurança das informações.",
     category: "Web",
     images: [
-      "./assets/tech-store/img0.jpg",
-      "./assets/tech-store/img1.jpg",
-      "./assets/tech-store/img2.jpg",
+      "./assets/my-tickets/img0.jpg",
+      "./assets/my-tickets/img1.jpg",
+      "./assets/my-tickets/img2.jpg",
+      "./assets/my-tickets/img3.jpg",
+      "./assets/my-tickets/img4.jpg",
     ],
-    url: "./assets/tech-store/cover.png",
-    demo: "https://tech-store-e-commerce.vercel.app/",
-    github: "https://github.com/ianabreu/e-commerce",
+    url: "./assets/my-tickets/cover.png",
+    demo: "https://my-tickets-web.vercel.app/",
+    github: "https://github.com/ianabreu/meus-chamados-web",
   },
   {
     id: 1,
@@ -41,5 +43,20 @@ const projects = [
     url: "./assets/popcine/cover.png",
     demo: "https://github.com/ianabreu/popcine",
     github: "https://github.com/ianabreu/popcine",
+  },
+  {
+    id: 3,
+    name: "Tech Store",
+    description:
+      "Projeto de um e-commerce desenvolvido em NextJs, Typescript, Prisma e PostgreSQL, com autenticação do google, listagem de categorias e produtos, carrinho de compras e pagamentos com Stripe.",
+    category: "Web",
+    images: [
+      "./assets/tech-store/img0.jpg",
+      "./assets/tech-store/img1.jpg",
+      "./assets/tech-store/img2.jpg",
+    ],
+    url: "./assets/tech-store/cover.png",
+    demo: "https://tech-store-e-commerce.vercel.app/",
+    github: "https://github.com/ianabreu/e-commerce",
   },
 ];
